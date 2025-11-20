@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZZ Power Solutions - Your Trusted Pittsburgh Electrician</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Style for the logo (since it's an image and might not load) */
+        .zbolt-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        /* Custom scroll utility to ensure smooth transitions on anchor clicks */
+        html {
+            scroll-behavior: smooth;
+        }
+        .text-clip-custom {
+            background-image: linear-gradient(to right, #FCD34D, #EAB308);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-900 bg-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-black py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <!-- Custom Logo - Image Placeholder -->
+                <div class="text-yellow-500 bg-white/5 p-1 rounded-md">
+                   <img src="logo_lgo.png" alt="ZZ Power Solutions Logo" class="w-10 h-10 object-contain zbolt-logo" onerror="this.style.display='none';">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl md:text-2xl font-black text-white tracking-tighter leading-none">ZZ POWER</span>
+                    <span class="text-sm md:text-base font-bold text-yellow-500 tracking-widest leading-none">SOLUTIONS</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-white hover:text-yellow-500 font-medium transition-colors text-sm uppercase tracking-wider">Home</a>
+                <a href="#about" class="text-white hover:text-yellow-500 font-medium transition-colors text-sm uppercase tracking-wider">About</a>
+                <a href="#services" class="text-white hover:text-yellow-500 font-medium transition-colors text-sm uppercase tracking-wider">Services</a>
+                <a href="#contact" class="text-white hover:text-yellow-500 font-medium transition-colors text-sm uppercase tracking-wider">Contact</a>
+                <a href="#contact">
+                    <button class="px-4 py-2 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-yellow-500 hover:bg-yellow-400 text-black focus:ring-yellow-500 text-sm">Get a Quote</button>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg id="menu-icon-open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="menu-icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 absolute top-full left-0 w-full border-t border-gray-800">
+            <div class="px-4 py-6 space-y-4 flex flex-col">
+                <a href="#home" class="text-white text-lg font-medium hover:text-yellow-500 mobile-nav-link">Home</a>
+                <a href="#about" class="text-white text-lg font-medium hover:text-yellow-500 mobile-nav-link">About</a>
+                <a href="#services" class="text-white text-lg font-medium hover:text-yellow-500 mobile-nav-link">Services</a>
+                <a href="#contact" class="text-white text-lg font-medium hover:text-yellow-500 mobile-nav-link">Contact</a>
+                <button class="px-6 py-3 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-yellow-500 hover:bg-yellow-400 text-black focus:ring-yellow-500 w-full text-center">Call Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <!-- Background Gradient -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Logo Figure -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-gray-800 border border-gray-700 p-4 rounded-2xl shadow-2xl shadow-black/50">
+                    <img src="logo_lgo.png" alt="ZZ Power Solutions Logo" class="w-20 h-20 object-contain zbolt-logo" onerror="this.style.display='none';">
+                </div>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight">
+                YOUR TRUSTED <br/>
+                <span class="text-clip-custom">ELECTRICIAN</span>
+            </h1>
+            
+            <!-- Highlighted Status -->
+            <div class="inline-block bg-white/5 backdrop-blur-sm border border-yellow-500/30 rounded-lg px-8 py-4 mb-10">
+                <p class="text-xl md:text-3xl text-yellow-500 font-black uppercase tracking-widest">
+                    Registered • Licensed • Insured
+                </p>
+            </div>
+
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-medium">
+                Professional, Reliable, and Safe Electrical Services<br />
+                Serving the Greater Pittsburgh community
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact">
+                    <button class="px-6 py-3 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-yellow-500 hover:bg-yellow-400 text-black focus:ring-yellow-500 w-full sm:w-auto text-lg">Schedule Service</button>
+                </a>
+                <a href="#services">
+                    <button class="px-6 py-3 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black focus:ring-yellow-500 w-full sm:w-auto text-lg">Our Services</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features / Trust Bar -->
+    <div class="bg-yellow-500 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-4">
+                    <div class="bg-black/10 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-black"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg">Registered, Licensed & Insured</h3>
+                        <p class="text-black/80 text-sm">PA License #123456</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-4">
+                    <div class="bg-black/10 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-black"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg">Timely Service</h3>
+                        <p class="text-black/80 text-sm">We respect your schedule</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-4">
+                    <div class="bg-black/10 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-black"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg">Satisfaction Guaranteed</h3>
+                        <p class="text-black/80 text-sm">Quality work, every time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-yellow-500 font-bold tracking-wider uppercase mb-2">About ZZ Power Solutions</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Led by Engineering Excellence</h3>
+            
+            <div class="text-gray-600 text-lg leading-relaxed space-y-6">
+                <p>
+                    ZZ Power Solutions was founded by Master Electrician, Jessie Zhao in 2025. Our electrical updates and installations are always safe, to code, and aesthetically pleasing. Jessie Zhao is specialized in electrical services, and obtained a PhD degree in Electrical Engineering from the University of Pittsburgh, with 10+ years of experience in electrical systems.
+                </p>
+            </div>
+            
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <!-- Check Circle Icon -->
+                <div class="flex items-center text-gray-800 font-medium bg-gray-50 px-6 py-3 rounded-full border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500 w-5 h-5 mr-3"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    PhD in Electrical Engineering
+                </div>
+                <div class="flex items-center text-gray-800 font-medium bg-gray-50 px-6 py-3 rounded-full border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500 w-5 h-5 mr-3"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Master Electrician
+                </div>
+                <div class="flex items-center text-gray-800 font-medium bg-gray-50 px-6 py-3 rounded-full border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500 w-5 h-5 mr-3"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    10+ Years Experience
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-yellow-500 font-bold tracking-wider uppercase mb-2">What We Do</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Comprehensive Electrical Services</h3>
+                <p class="mt-4 text-gray-600 text-lg">From troubleshooting to full-scale installations, we have the expertise to handle it all.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1: Panel Upgrades -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600 group-hover:text-white transition-colors duration-300 w-8 h-8"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Panel Upgrades</h4>
+                    <p class="text-gray-600 leading-relaxed">Modernize your home's power capacity. Safe, code-compliant heavy-ups for older Pittsburgh homes.</p>
+                </div>
+                <!-- Service Card 2: Rewiring & Repair -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600 group-hover:text-white transition-colors duration-300 w-8 h-8"><path d="M18 7v6l-5 5h-1L7 13V7"></path><path d="M12 2v5"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Rewiring & Repair</h4>
+                    <p class="text-gray-600 leading-relaxed">Complete home rewiring, knob-and-tube replacement, and troubleshooting for faulty outlets.</p>
+                </div>
+                <!-- Service Card 3: Lighting Solutions -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600 group-hover:text-white transition-colors duration-300 w-8 h-8"><path d="M15 14l-3-7-3 7-4 3h10l-4-3z"></path><path d="M12 21a1 1 0 0 1-1-1v-2h2v2a1 1 0 0 1-1 1z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Lighting Solutions</h4>
+                    <p class="text-gray-600 leading-relaxed">Interior and exterior lighting design, LED retrofits, and smart home lighting installation.</p>
+                </div>
+                <!-- Service Card 4: Generator Install -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600 group-hover:text-white transition-colors duration-300 w-8 h-8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="9" x2="12" y2="15"></line><line x1="15" y1="12" x2="9" y2="12"></line></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Generator Install</h4>
+                    <p class="text-gray-600 leading-relaxed">Never lose power again. Whole-home generator installation and battery backup systems.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+                 <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-yellow-500 rounded-full opacity-10 blur-3xl"></div>
+                 <div class="relative z-10 mb-6 md:mb-0">
+                   <h4 class="text-2xl md:text-3xl font-bold text-white mb-2">Need a Custom Solution?</h4>
+                   <p class="text-gray-400">We handle unique commercial and industrial projects too.</p>
+                 </div>
+                 <div class="relative z-10">
+                   <a href="#contact">
+                     <button class="px-6 py-3 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-yellow-500 hover:bg-yellow-400 text-black focus:ring-yellow-500">Contact Us Today</button>
+                   </a>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-yellow-500 font-bold tracking-wider uppercase mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Contact</h3>
+                    <p class="text-gray-600 text-lg mb-10">
+                        Ready to get started? Fill out the form or give us a call. We provide free estimates for major installations and transparent pricing for repairs.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Phone</h4>
+                                <p class="text-gray-600">(412) 214-2532</p>
+                                <p class="text-sm text-gray-500">Mon-Fri: 8am - 6pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-600"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-600">jrzhao317@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Service Area</h4>
+                                <p class="text-gray-600">Greater Pittsburgh Area<br/>Allegheny County & Beyond</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100">
+                    <!-- Form: Captures data and uses JS to build the mailto link -->
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors" placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors">
+                                <option>Panel Upgrade</option>
+                                <option>General Repair</option>
+                                <option>Lighting Installation</option>
+                                <option>New Construction</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" id="message" name="message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors" placeholder="Tell us about your electrical issue..." required></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-4 rounded-md font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-yellow-500 hover:bg-yellow-400 text-black focus:ring-yellow-500 w-full text-lg">Send Message</button>
+                    </form>
+                    <p id="message-status" class="mt-4 text-center text-sm text-gray-600 hidden">Please check your default email client to send the pre-filled message.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-gray-800 pb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#home" class="flex items-center space-x-3 mb-6">
+                       <div class="text-yellow-500 bg-white/5 p-1 rounded-md">
+                           <img src="logo_lgo.png" alt="ZZ Power Solutions Logo" class="w-8 h-8 object-contain zbolt-logo" onerror="this.style.display='none';">
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tighter text-white">ZZ POWER <span class="text-yellow-500">SOLUTIONS</span></span>
+                    </a>
+                    <p class="text-gray-400 max-w-sm mb-6">
+                        Professional, reliable, and safe electrical services for the greater Pittsburgh community. We power your home with integrity.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social placeholders -->
+                        <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-colors cursor-pointer">
+                          <span class="font-bold text-sm">FB</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-colors cursor-pointer">
+                           <span class="font-bold text-sm">IN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-yellow-500 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-yellow-500 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-yellow-500 transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Pittsburgh, PA</li>
+                        <li>(412) 214-2532</li>
+                        <li>jrzhao317@gmail.com</li>
+                        <li class="text-yellow-500 font-bold mt-4">Emergency Service Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-gray-600 text-sm">
+                <p>&copy; <span id="current-year"></span> ZZ Power Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+            const contactForm = document.getElementById('contact-form');
+            const messageStatus = document.getElementById('message-status');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 1. Navigation Scroll Effect
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('py-6');
+                    navbar.classList.add('bg-black/95', 'shadow-lg', 'py-4');
+                } else {
+                    navbar.classList.add('py-6');
+                    navbar.classList.remove('bg-black/95', 'shadow-lg', 'py-4');
+                }
+            };
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Run once on load
+
+            // 2. Mobile Menu Toggle
+            const toggleMenu = () => {
+                const isOpen = mobileMenu.classList.toggle('hidden');
+                menuIconOpen.classList.toggle('hidden', !isOpen);
+                menuIconClose.classList.toggle('hidden', isOpen);
+            };
+            
+            menuToggle.addEventListener('click', toggleMenu);
+
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         toggleMenu();
+                    }
+                });
+            });
+
+
+            // 3. Contact Form Submission (Mailto)
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    service: document.getElementById('service').value,
+                    message: document.getElementById('message').value
+                };
+
+                const recipientEmail = 'jrzhao317@gmail.com';
+                const subject = `Service Request: ${formData.service} - ${formData.firstName} ${formData.lastName}`;
+                const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nService Needed: ${formData.service}\n\nMessage:\n${formData.message}`;
+
+                // FIX: Removed the incorrect escape characters (\) from the backticks (`)
+                // Construct and open mailto link
+                const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Use setTimeout to allow the browser to process the form submission event
+                // before navigating to the mailto link, improving compatibility.
+                setTimeout(() => {
+                    window.location.href = mailtoLink;
+                }, 100);
+
+                // Show instruction message
+                messageStatus.textContent = "Your email client should have opened. Please press 'Send' to complete the request.";
+                messageStatus.classList.remove('hidden');
+
+                // Reset form fields after successful attempt
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
